@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:padding="14dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/linear_calculator"
+        app:layout_constraintBottom_toTopOf="@id/linear_syllabus"
+        app:layout_constraintEnd_toStartOf="@+id/linear_timetable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:onClick="calculatorActivity"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_calculator" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="C.G.P.A \n Calculator"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:padding="12dp"
+            app:layout_constraintStart_toEndOf="@id/linear_calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_academic"
+            android:id="@+id/linear_timetable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="timetableActivity"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timetable"
+                android:layout_gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Timetable \n"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/linear_calculator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linear_academic"
+            app:layout_constraintBottom_toTopOf="@id/linear_fine"
+            android:id="@+id/linear_syllabus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="syllabusActivity"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_syllabus"
+                android:layout_gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Syllabus \n"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="12dp"
+            android:id="@+id/linear_academic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/linear_syllabus"
+            app:layout_constraintTop_toBottomOf="@id/linear_timetable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/linear_todo"
+            android:onClick="academicActivity"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_academic"
+                android:layout_gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Academic \n Section"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="12dp"
+            android:id="@+id/linear_fine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_syllabus"
+            app:layout_constraintEnd_toStartOf="@id/linear_todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="fineActivity"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_fine"
+                android:layout_gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library \n Fine"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/linear_fine"
+            app:layout_constraintTop_toBottomOf="@id/linear_academic"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/linear_todo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="todoActivity"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_todo"
+                android:layout_gravity="center"
+                />
+            <com.google.android.material.textview.MaterialTextView
+                android:padding="8dp"
+                android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To-Do \n List"
+                android:textAlignment="center"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

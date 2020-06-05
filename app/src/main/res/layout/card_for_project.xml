@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="18sp"
+    app:cardCornerRadius="16dp"
+    android:id="@+id/library_card_view"
+    android:layout_marginVertical="12dp"
+    android:layout_marginHorizontal="12dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/app_icon"
+                android:padding="12dp"
+                />
+            <TextView
+                android:id="@+id/project_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROJECT NAME"
+                android:paddingLeft="18sp"
+                android:paddingTop="18sp"
+                style="@style/TextAppearance.MaterialComponents.Headline5"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="18sp"
+            android:paddingVertical="9dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description :- "
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
+            <TextView
+                android:id="@+id/project_description_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="blah! blah! blah!"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="18sp"
+            android:paddingVertical="9dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    Due Date :- "
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
+            <TextView
+                android:id="@+id/project_due_date_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/12/2020"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
